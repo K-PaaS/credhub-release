@@ -17,9 +17,10 @@
          springSecurityOauth2AutoconfigureVersion = '2.3.1.RELEASE'
 +        log4jVersion = '2.15.0' // this pinning can be removed when we bump to a spring boot starter version that has 2.15.0+ (due to CVE https://github.com/advisories/GHSA-jfh8-c2jp-5v3q in log4j < 2.15.0)
      }
-     
+
 ```
-<br />
+<br/>
+
 > $ vi src/credhub/applications/credhub-api/build.gradle
 ```diff
      implementation("org.apache.commons:commons-lang3:${apacheCommonsLang3Version}")
@@ -35,4 +36,4 @@
      implementation("org.jetbrains.kotlin:kotlin-reflect")
 
 ```
-<br />
+
