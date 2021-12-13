@@ -11,4 +11,28 @@
          passayVersion = '1.6.0'
          postgresqlJdbcVersion = '42.2.14'
          spotBugsToolVersion = '3.1.9'
+
+         springRestDocsVersion = '2.0.4.RELEASE'
+         springSecurityOauth2Version = '2.5.0.RELEASE'
+         springSecurityOauth2AutoconfigureVersion = '2.3.1.RELEASE'
++        log4jVersion = '2.15.0' // this pinning can be removed when we bump to a spring boot starter version that has 2.15.0+ (due to CVE https://github.com/advisories/GHSA-jfh8-c2jp-5v3q in log4j < 2.15.0)
+     }
+     
 ```
+<br />
+> $ vi src/credhub/applications/credhub-api/build.gradle
+```diff
+     implementation("org.apache.commons:commons-lang3:${apacheCommonsLang3Version}")
+     implementation("commons-codec:commons-codec:${commonsCodecVersion}")
+
++    implementation("org.apache.logging.log4j:log4j-api:${log4jVersion}")
++    implementation("org.apache.logging.log4j:log4j-core:${log4jVersion}")
++    implementation("org.apache.logging.log4j:log4j-jul:${log4jVersion}")
++    implementation("org.apache.logging.log4j:log4j-slf4j-impl:${log4jVersion}")
++
+     implementation('com.fasterxml.jackson.module:jackson-module-kotlin')
+     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+     implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+```
+<br />
