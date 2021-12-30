@@ -15,7 +15,7 @@
          springRestDocsVersion = '2.0.4.RELEASE'
          springSecurityOauth2Version = '2.5.0.RELEASE'
          springSecurityOauth2AutoconfigureVersion = '2.3.1.RELEASE'
-+        log4jVersion = '2.17.0'
++        log4jVersion = '2.17.1'
      }
 
 ```
